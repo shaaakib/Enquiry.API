@@ -14,6 +14,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<EnquiryDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("EnquiryConnection")));
 
+builder.Services.AddDbContext<UserDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("UserConnection")));
+
 builder.Services.AddCors();
 builder.Services.AddCors(options =>
 {
